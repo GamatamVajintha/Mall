@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "malls",
+  "info": {
+    "singularName": "mall",
+    "pluralName": "malls",
+    "displayName": "Mall",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "richtext"
+    },
+    "things": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::thing.thing",
+      "inversedBy": "malls"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

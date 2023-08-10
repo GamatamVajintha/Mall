@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "things",
+  "info": {
+    "singularName": "thing",
+    "pluralName": "things",
+    "displayName": "Thing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "malls": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::mall.mall",
+      "mappedBy": "things"
+    }
+  }
+}
